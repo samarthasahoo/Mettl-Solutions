@@ -1,0 +1,36 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    int input1=sc.nextInt();
+    int temp=input1;
+    int i=0;
+		int count=0;
+		while(temp>0)
+		{
+			temp=temp/10;
+			count++;
+		}
+		int a[]=new int[count];
+		while(input1>0)
+		{
+			a[i]=input1%10;
+			input1=input1/10;
+			i++;
+		}
+		int lo=0;
+		int hi=count-1;
+		while(hi>lo)
+		{
+				if(a[lo]!=a[hi])
+				{
+				    System.out.println("not pall");
+				    break;
+				}
+				lo++;
+				hi--;
+		}		
+		
+	}
+}
